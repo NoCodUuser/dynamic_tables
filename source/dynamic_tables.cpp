@@ -1,8 +1,9 @@
 #include <iostream>
 #include <dynamic_tables.h>
 
-void create_and_zeroing_int_array(int** boss_array, int columns, int rows)
+void create_and_zeroing_int_array(int**& boss_array, int columns, int rows)
 {
+    boss_array = new int* [columns];
     for(int i = 0; i < columns; ++i)
     {
         boss_array[i] = new int[rows];
@@ -25,4 +26,6 @@ void print_int_array(int** boss_array, int columns, int rows)
         std::cout << std::endl;
     }
 }
+
+
 

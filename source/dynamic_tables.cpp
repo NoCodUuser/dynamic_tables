@@ -27,5 +27,25 @@ void print_int_array(int** boss_array, int columns, int rows)
     }
 }
 
+int size_of_intersection_array(int columns, int columns_2)
+{
+    if(columns > columns_2)
+    {
+        return columns_2;
+    }
+    else if(columns_2 > columns)
+    {
+        return columns;
+    }
+    return 0;
+}
 
+void delete_array(int** boss_array, int columns)
+{
+    for(int i = 0; i < columns; ++i)
+    {
+        delete[] boss_array[i];
+    }
+    delete[] boss_array;
+}
 
